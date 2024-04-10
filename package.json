@@ -1,0 +1,25 @@
+{
+  "name": "solarmate",
+  "version": "1.0.0",
+  "description": "Main Website",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnujxYadav/Solar-Mate.git"
+  },
+  "author": "anujyadav.tech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnujxYadav/Solar-Mate/issues"
+  },
+  "homepage": "https://github.com/AnujxYadav/Solar-Mate#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
