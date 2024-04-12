@@ -98,3 +98,24 @@
     
 })(jQuery);
 
+
+function submitHandler () {
+    event.preventDefault();
+    console.log("Hello");
+    var form = document.querySelector('.form-style');
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+    }
+    var firstName = document.querySelector('input[name="firstName"]').value;
+    var emailID = document.querySelector('input[name="emailID"]').value;
+    var mobileNumber = document.querySelector('input[name="mobileNumber"]').value;
+    var billInfo = document.querySelector('select[name="billInfo"]').value;
+    var specialNote = document.querySelector('textarea[name="specialNote"]').value;
+    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.26756016=' + encodeURIComponent(billInfo) + '&entry.1755035927=' + encodeURIComponent(specialNote);
+    
+    // window.location.href = preFilledLink;
+    window.open(preFilledLink, '_blank').focus(); 
+}

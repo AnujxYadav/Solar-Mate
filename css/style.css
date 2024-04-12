@@ -155,7 +155,7 @@ body {
 
 .about-me-container {
     background-color: var(--customBackground);
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 @keyframes reveal {
@@ -319,11 +319,15 @@ body {
     outline: none;
 }
 
+.navbar .navbar-nav .nav-link {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+}
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 10px;
+    border-bottom-color: var(--primary);
 }
 
 .navbar .dropdown-toggle::after {
@@ -719,6 +723,10 @@ body {
 
 .testimonial-carousel .owl-item.center .testimonial-text {
     transform: scale(1);
+}
+
+#getQuote {
+    scroll-behavior: smooth;
 }
 
 
