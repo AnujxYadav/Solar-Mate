@@ -172,7 +172,8 @@ const org = {
 }
 
 $(document).ready(function() {
-  var timeoutId;
+    var timeoutId;
+    var originalWidth = $('.col-md-6.col-lg-4.wow.fadeInUp.view1').css('width');
 
   $('.col-md-6.col-lg-4.wow.fadeInUp.view1').hover(
     function() {
@@ -194,7 +195,8 @@ $(document).ready(function() {
         that.animate({ width: '100%' }, 150);
       }, 500); // 500 milliseconds = 0.5 second
     },
-    function() {
+      function () {
+        console.log("done");
       var that = $(this);
       clearTimeout(timeoutId);
       timeoutId = setTimeout(function() {
@@ -205,11 +207,12 @@ $(document).ready(function() {
         });
           var icon = child.children('.position-relative').first().children('.service-icon').first();
           // hide the icon
+          if(window.width < 992)
             icon.show();
           var nonHoverChild = child.children('.position-relative').first().children('.non-hover').first();
           // change the content of the non-hover div to "Hello"
             nonHoverChild.html(org[nonHoverChild.attr('id')]);
-        that.animate({ width: '33.33%' }, 200, function() {
+        that.animate({ width: originalWidth }, 200, function() {
           that.siblings().show(250);
         });
       }, 500); // 500 milliseconds = 0.5 second

@@ -502,6 +502,14 @@ body {
     background: var(--primary);
 }
 
+@media (max-width: 992px) {
+    .service-item img {
+        display: none;
+    }
+    .service-icon {
+        display: none;
+    }
+}
 
 /*** Feature ***/
 @media (min-width: 992px) {
@@ -513,6 +521,13 @@ body {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
+
+/* @media (min-width: 500px) {
+    .row-order-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+} */
 
 @media (min-width: 1200px) {
     .feature-text  {
