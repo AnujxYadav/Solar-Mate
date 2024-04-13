@@ -129,17 +129,22 @@ const dict = {
 
 <p>With a focus on quality and reliability, we use industry-leading technology and materials to deliver durable and long-lasting solar systems. Whether you're looking to reduce your carbon footprint, lower your electricity bills, or gain energy independence, we're here to make it happen.</p>
 
-<p>Beyond installation, we provide ongoing maintenance and support to keep your solar panels performing at their best for years to come. Our commitment to customer satisfaction means you can trust us to deliver exceptional service every step of the way.</p>`,
+<p>Beyond installation, we provide ongoing maintenance and support to keep your solar panels performing at their best for years to come. Our commitment to customer satisfaction means you can trust us to deliver exceptional service every step of the way.</p><p class="small fw-medium text-primary">Remove your cursor to view other services<i
+                                            class="fa fa-arrow-right ms-2"></i></p>`,
     'commercial_content': `<p>Elevate your business with our comprehensive commercial solar services. We specialize in designing and implementing customized solar solutions tailored to meet the unique energy needs of commercial enterprises. Our expert team works closely with you to assess your energy requirements, analyze your facility, and develop a solar system that maximizes efficiency and savings.</p>
 
 <p>From large-scale installations on rooftops to ground-mounted arrays, we leverage cutting-edge technology and high-quality materials to ensure optimal performance and longevity. Our commitment to excellence extends beyond installation – we provide ongoing maintenance and support to ensure your solar system operates at peak efficiency for years to come.</p>
 
-<p>By harnessing the power of the sun, you can significantly reduce your operating costs, enhance your sustainability profile, and contribute to a cleaner environment. Join the ranks of forward-thinking businesses embracing renewable energy solutions and take control of your energy future today.</p>`,
+<p>By harnessing the power of the sun, you can significantly reduce your operating costs, enhance your sustainability profile, and contribute to a cleaner environment. Join the ranks of forward-thinking businesses embracing renewable energy solutions and take control of your energy future today.</p>
+<p class="small fw-medium text-primary">Remove your cursor to view other services<i
+                                            class="fa fa-arrow-right ms-2"></i></p>`,
     'industrial_content': `<p>Transform your industrial facility with our specialized industrial solar services. We excel in crafting tailor-made solar solutions engineered to meet the robust energy demands of industrial operations. Our dedicated team collaborates closely with you to assess your energy needs, conduct thorough site evaluations, and develop a solar system optimized for maximum efficiency and cost-effectiveness.</p>
 
 <p>Whether your facility requires rooftop installations, ground-mounted arrays, or solar carports, we leverage state-of-the-art technology and premium-grade materials to ensure robust performance and durability. Our end-to-end services encompass design, installation, and ongoing maintenance, guaranteeing seamless operation and prolonged system lifespan.</p>
 
-<p>By harnessing solar energy, you can substantially reduce operational expenses, bolster your sustainability credentials, and mitigate your carbon footprint. Join the forefront of industrial enterprises embracing renewable energy solutions and secure a competitive edge in today's green economy.</p>`
+<p>By harnessing solar energy, you can substantially reduce operational expenses, bolster your sustainability credentials, and mitigate your carbon footprint. Join the forefront of industrial enterprises embracing renewable energy solutions and secure a competitive edge in today's green economy.</p>
+<p class="small fw-medium text-primary">Remove your cursor to view other services<i
+                                            class="fa fa-arrow-right ms-2"></i></p>`,
 }
 
 
