@@ -91,7 +91,7 @@
 
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-0" style="background-color: rgb(233, 242, 233);">
+        <nav class="navbar navbar-expand-lg sticky-top p-0" style="background-color: rgb(233, 242, 233);">
             <a href="index.html" class="navbar-brand d-flex align-items-center px-1 px-lg-5">
                 <!-- <h2 class="m-0 text-primary">Solar Mate</h2> -->
                 <img src="img/logo-new.png" alt="Logo" class="img-fluid animated slideInLeft" style="height: 65px;">
@@ -102,7 +102,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="#" class="nav-item nav-link">Home</a>
+                    <a href="" class="nav-item nav-link">Home</a>
                     <a href="#aboutUs" class="nav-item nav-link">About</a>
                     <a href="#serviceTab" class="nav-item nav-link">Service</a>
                     <!-- <a href="project.html" class="nav-item nav-link">Project</a> -->
@@ -206,85 +206,80 @@
         <div class="container-xxl py-5" id="serviceTab">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h6 class="text-primary about-me-static" style="font-size: 50px;">Our Services</h6>
-                    <h1 class="mb-4">We Are Pioneers In The World Of Renewable Energy</h1>
+                    <h3 class="text-primary about-me-static" style="font-size: 50px;">Our Services</h3>
+
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp view1" data-wow-delay="0.1s">
                         <div class="service-item rounded overflow-hidden">
-                            <img class="img-fluid" src="img/img-600x400-1.jpg" alt="">
-                            <div class="position-relative p-4 pt-0">
+                            <img class="img-fluid hovered_image" src="img/img-600x400-1.jpg" alt="" style="max-height: 500px;">
+                            <div class="position-relative p-4 pt-0 view65">
                                 <div class="service-icon">
                                     <i class="fa fa-solar-panel fa-3x"></i>
                                 </div>
-                                <h4 class="mb-3">Solar Panels</h4>
-                                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                                <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                                <h4 class="mb-3" style="margin-top: 25px;">Residential</h4>
+                                <div class="non-hover" id="residential_content">
+                                    <p>Our residential solar panel services bring clean energy solutions to your
+                                        doorstep. We specialize in custom
+                                        installations tailored to your home's unique needs, maximizing energy efficiency
+                                        and savings.</p>
+                                    <p class="small fw-medium text-primary">Hover to Read More<i
+                                            class="fa fa-arrow-right ms-2"></i></p>
+                                </div>
+                                <!-- <div class="hovered" style="visibility: hidden;">
+                                    <p>Our residential solar panel services bring clean energy solutions to your doorstep. We specialize in custom
+                                    installations tailored to your home's unique needs, maximizing energy efficiency and savings. Our expert team handles
+                                    everything from design to installation with precision and professionalism, ensuring a seamless transition to solar
+                                    power.
+                                    <br>
+                                    With a focus on quality and reliability, we use industry-leading technology and materials to deliver durable and
+                                    long-lasting solar systems. Whether you're looking to reduce your carbon footprint, lower your electricity bills, or
+                                    gain energy independence, we're here to make it happen.
+                                    <br>
+                                    Beyond installation, we provide ongoing maintenance and support to keep your solar panels performing at their best for
+                                    years to come. Our commitment to customer satisfaction means you can trust us to deliver exceptional service every step
+                                    of the way.</p>
+                                </div> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp view1" data-wow-delay="0.3s">
                         <div class="service-item rounded overflow-hidden">
-                            <img class="img-fluid" src="img/img-600x400-2.jpg" alt="">
+                            <img class="img-fluid" src="img/img-600x400-2.jpg" alt="" style="max-height: 500px;">
                             <div class="position-relative p-4 pt-0">
                                 <div class="service-icon">
                                     <i class="fa fa-wind fa-3x"></i>
                                 </div>
-                                <h4 class="mb-3">Wind Turbines</h4>
-                                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                                <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                                <h4 class="mb-3" style="margin-top: 25px;">Commercial</h4>
+                                <div class="non-hover" id="commercial_content">
+                                    <p>Elevate your business with our comprehensive commercial solar services. Our
+                                        expert
+                                        team works closely to assess your
+                                        requirements, analyze your facility, and develop a solar system that maximizes
+                                        efficiency and savings.</p>
+                                    <p class="small fw-medium text-primary">Hover to Read More<i
+                                            class="fa fa-arrow-right ms-2"></i></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp view1" data-wow-delay="0.2s">
                         <div class="service-item rounded overflow-hidden">
-                            <img class="img-fluid" src="img/img-600x400-3.jpg" alt="">
+                            <img class="img-fluid" src="img/img-600x400-3.jpg" alt="" style="max-height: 500px;">
                             <div class="position-relative p-4 pt-0">
                                 <div class="service-icon">
                                     <i class="fa fa-lightbulb fa-3x"></i>
                                 </div>
-                                <h4 class="mb-3">Hydropower Plants</h4>
-                                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                                <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded overflow-hidden">
-                            <img class="img-fluid" src="img/img-600x400-4.jpg" alt="">
-                            <div class="position-relative p-4 pt-0">
-                                <div class="service-icon">
-                                    <i class="fa fa-solar-panel fa-3x"></i>
+                                <h4 class="mb-3" style="margin-top: 25px;">Industrial</h4>
+                                <div class="non-hover" id="industrial_content">
+                                    <p>Transform your industrial facility with our specialized industrial solar
+                                        services. We
+                                        excel in crafting tailor-made
+                                        solar solutions engineered to meet the robust energy demands of industrial
+                                        operations.</p>
+                                    <p class="small fw-medium text-primary">Hover to Read More<i
+                                            class="fa fa-arrow-right ms-2"></i></p>
                                 </div>
-                                <h4 class="mb-3">Solar Panels</h4>
-                                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                                <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded overflow-hidden">
-                            <img class="img-fluid" src="img/img-600x400-5.jpg" alt="">
-                            <div class="position-relative p-4 pt-0">
-                                <div class="service-icon">
-                                    <i class="fa fa-wind fa-3x"></i>
-                                </div>
-                                <h4 class="mb-3">Wind Turbines</h4>
-                                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                                <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded overflow-hidden">
-                            <img class="img-fluid" src="img/img-600x400-6.jpg" alt="">
-                            <div class="position-relative p-4 pt-0">
-                                <div class="service-icon">
-                                    <i class="fa fa-lightbulb fa-3x"></i>
-                                </div>
-                                <h4 class="mb-3">Hydropower Plants</h4>
-                                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                                <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                             </div>
                         </div>
                     </div>
@@ -298,7 +293,7 @@
         <div class="container-fluid overflow-hidden my-5 px-lg-0">
             <div class="container feature px-lg-0">
                 <div class="row g-0 mx-lg-0">
-                    <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.2s" style="min-height: 400px;">
                         <div class="position-relative h-100 d-flex justify-content-center align-items-center">
                             <img class="position-absolute img-fluid h-100" src="img/removedBg.png"
                                 style="object-fit: cover;" alt="">
@@ -369,8 +364,8 @@
             <div class="row">
                 <div class="col-12 col-lg-6 mb-16 mb-lg-0">
                     <div class="mw-lg mx-auto">
-                        <h3 class="mb-4 about-me" style="color: black;">Frequently Asked Questions</h3>
-                        <div class="accordion" id="accordionExample">
+                        <h3 class="mb-4 about-me wow fadeIn" style="color: black;" data-wow-delay="0.1s">Frequently Asked Questions</h3>
+                        <div class="accordion wow fadeInUp" id="accordionExample"  data-wow-delay="0.2s">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button color-faq-question" type="button"
@@ -520,7 +515,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center wow fadeInUp"  data-wow-delay="0.2s">
                     <img class="img-fluid" src="./img/team-2.jpg" alt=""
                         style="width: 80%; height: 100%; object-fit: cover;">
                 </div>
@@ -531,7 +526,7 @@
 
 
         <!-- About Start -->
-        <div id="aboutUs" class="container-fluid overflow-hidden about-me-container"
+        <div id="aboutUs" class="container-fluid overflow-hidden about-me-container wow fadeInUp"   data-wow-delay="0.2s"
             style="margin-top: 200px; margin-bottom: 200px;">
             <div class="container about px-lg-0 about-us-border">
                 <div class="row g-0 mx-lg-0">
@@ -590,7 +585,7 @@
                             <span>We are contributing to significant energy savings and environmental
                                 preservation.</span>
                         </div>
-                        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.2s">
                             <div class="d-flex align-items-center mb-4">
                                 <div class="btn-lg-square bg-primary rounded-circle me-3">
                                     <i class="fa fa-award text-white"></i>
@@ -619,7 +614,7 @@
 
 
         <!-- Quote Start -->
-        <div id="getQuote" class="container-fluid overflow-hidden mb-5 mt-3 px-lg-0 box" style="margin-top: 100px;">
+        <div id="getQuote" class="container-fluid overflow-hidden mb-5 mt-3 px-lg-0 box wow fadeInUp" style="margin-top: 100px;"   data-wow-delay="0.2s">
             <div class="container px-lg-0" style="width: 100%;">
                 <div class="row">
                     <div class="col-lg-6">
@@ -635,14 +630,14 @@
                             <form class="form-style needs-validation" novalidate onsubmit="submitHandler()">
                                 <div class="row g-3">
                                     <div class="col-12 col-sm-6 mt-5">
-                                        <input type="text" class="form-control border-0" placeholder="Your Name"
+                                        <input type="text" class="form-control border-3" placeholder="Your Name"
                                             style="height: 55px;" required name="firstName">
                                         <div class="invalid-feedback">
                                             Please enter your name.
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 mt-5">
-                                        <input type="email" class="form-control border-0" placeholder="Your Email"
+                                        <input type="email" class="form-control border-3" placeholder="Your Email"
                                             style="height: 55px;" required name="emailID">
                                         <div class="invalid-feedback">
                                             Please enter a valid email.
@@ -651,7 +646,7 @@
                                     <div class="col-12 col-sm-6 mt-3">
                                         <div class="input-group">
                                             <div class="input-group-text">+91</div>
-                                            <input type="number" class="form-control border-0" placeholder="Your Mobile"
+                                            <input type="number" class="form-control border-3" placeholder="Your Mobile"
                                                 style="height: 55px;" required name="mobileNumber">
                                         </div>
                                         <div class="invalid-feedback">
@@ -659,7 +654,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 mt-3">
-                                        <select class="form-select border-0" style="height: 55px;" required
+                                        <select class="form-select border-3" style="height: 55px;" required
                                             name="billInfo">
                                             <option value="">Average Monthly Bill</option>
                                             <option value="Below 1500rs">Below 1500rs</option>
@@ -672,7 +667,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 mt-3">
-                                        <textarea class="form-control border-0" placeholder="Special Note"
+                                        <textarea class="form-control border-3" placeholder="Special Note"
                                             name="specialNote"></textarea>
                                     </div>
                                     <div class="col-12 mt-5 d-flex justify-content-center align-items-center">
