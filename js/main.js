@@ -219,3 +219,109 @@ $(document).ready(function() {
     }
   );
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+                    const serviceItems = document.querySelectorAll('.service-item');
+
+                    function toggleExpand (item, expand) {
+                        if (expand) {
+                            item.classList.add('expanded');
+                        } else {
+                            item.classList.remove('expanded');
+                        }
+                    }
+
+                    function handleInteraction (e) {
+                        const item = e.currentTarget;
+                        toggleExpand(item, !item.classList.contains('expanded'));
+                        e.stopPropagation();
+                    }
+
+                    serviceItems.forEach(item => {
+                        item.addEventListener('click', handleInteraction);
+                        item.addEventListener('touchstart', handleInteraction, { passive: true });
+                    });
+
+                    // Close expanded items when clicking outside
+                    document.addEventListener('click', function (e) {
+                        if (!e.target.closest('.service-item')) {
+                            serviceItems.forEach(item => toggleExpand(item, false));
+                        }
+                    });
+
+                    document.addEventListener('touchstart', function (e) {
+                        if (!e.target.closest('.service-item')) {
+                            serviceItems.forEach(item => toggleExpand(item, false));
+                        }
+                    }, { passive: true });
+                });
+
+            function updateSliderValue (slider, outputId) {
+                    document.getElementById(outputId).textContent = slider.value;
+                    calculateSavings();
+                }
+
+                function calculateSavings () {
+                    const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
+                    const dailyUsage = parseFloat(document.getElementById('dailyUsage').value);
+
+                    // This is a simplified calculation incorporating both values
+                    const monthlySavings = monthlyBill * (dailyUsage / 50); // Adjust this formula as needed
+                    const yearlySavings = monthlySavings * 12;
+                    const tenYearSavings = yearlySavings * 10;
+
+                    document.getElementById('savingsAmount').textContent = '$' + tenYearSavings.toFixed(2);
+                    document.getElementById('billWithout').textContent = monthlyBill.toFixed(2);
+                    document.getElementById('billWith').textContent = (monthlyBill - monthlySavings).toFixed(2);
+                }
+
+                // Initial calculation
+                calculateSavings();
+
+                // Add event listeners to both sliders
+                document.getElementById('monthlyBill').addEventListener('input', function () {
+                    updateSliderValue(this, 'monthlyBillValue');
+                });
+
+                document.getElementById('dailyUsage').addEventListener('input', function () {
+                    updateSliderValue(this, 'dailyUsageValue');
+                });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceItems = document.querySelectorAll('.service-item');
+
+    function toggleExpand(item, expand) {
+        if (expand) {
+            item.classList.add('expanded');
+        } else {
+            item.classList.remove('expanded');
+        }
+    }
+
+    function handleInteraction(e) {
+        const item = e.currentTarget;
+        toggleExpand(item, !item.classList.contains('expanded'));
+        e.stopPropagation();
+    }
+
+    serviceItems.forEach(item => {
+        item.addEventListener('click', handleInteraction);
+        item.addEventListener('touchstart', handleInteraction, { passive: true });
+    });
+
+    // Close expanded items when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.service-item')) {
+            serviceItems.forEach(item => toggleExpand(item, false));
+        }
+    });
+
+    document.addEventListener('touchstart', function(e) {
+        if (!e.target.closest('.service-item')) {
+            serviceItems.forEach(item => toggleExpand(item, false));
+        }
+    }, { passive: true });
+});
