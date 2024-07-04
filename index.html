@@ -35,6 +35,12 @@
         <!-- Template Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <!-- Bootstrap 5 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    
     </head>
 
     <body>
@@ -93,35 +99,21 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg sticky-top p-0" style="background-color: #f3fff4;">
             <a href="index.html" class="navbar-brand d-flex align-items-center px-1 px-lg-5">
-                <!-- <h2 class="m-0 text-primary">Solar Mate</h2> -->
-                <img src="img/logo-new.png" alt="Logo" class="img-fluid animated slideInLeft" style="height: 65px;">
+              <img src="img/logo-new.png" alt="Logo" class="img-fluid animated slideInLeft" style="height: 65px;">
             </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler custom-toggler" type="button" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="" class="nav-item nav-link">Home</a>
-                    <a href="#aboutUs" class="nav-item nav-link">About</a>
-                    <a href="#serviceTab" class="nav-item nav-link">Service</a>
-                    <!-- <a href="project.html" class="nav-item nav-link">Project</a> -->
-                    <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu bg-light m-0">
-                            <a href="feature.html" class="dropdown-item">Feature</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div> -->
-                    <a href="#footer" class="nav-item nav-link">Contact</a>
-                </div>
-                <a href="#getQuote" class="btn btn-primary rounded-2 py-4 px-lg-5 d-none d-lg-block">Get A
-                    Quote<i class="fa fa-arrow-right ms-3"></i></a>
+              <ul class="navbar-nav ms-auto p-4 p-lg-0">
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#aboutUs" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#serviceTab" class="nav-link">Service</a></li>
+                <li class="nav-item"><a href="#footer" class="nav-link">Contact</a></li>
+              </ul>
+              <a href="#getQuote" class="btn btn-primary rounded-2 py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
-        </nav>
+          </nav>
         <!-- Navbar End -->
 
 
@@ -219,7 +211,7 @@
                                         doorstep. We specialize in custom
                                         installations tailored to your home's unique needs, maximizing energy efficiency
                                         and savings.</p>
-                                    <p class="small fw-medium text-primary">Hover to Read More<i
+                                    <p class="small fw-medium text-primary hover-text">Hover to Read More<i
                                             class="fa fa-arrow-right ms-2"></i></p>
                                 </div>
                                 <!-- <div class="hovered" style="visibility: hidden;">
@@ -253,7 +245,7 @@
                                         team works closely to assess your
                                         requirements, analyze your facility, and develop a solar system that maximizes
                                         efficiency and savings.</p>
-                                    <p class="small fw-medium text-primary">Hover to Read More<i
+                                    <p class="small fw-medium text-primary hover-text">Hover to Read More<i
                                             class="fa fa-arrow-right ms-2"></i></p>
                                 </div>
                             </div>
@@ -273,7 +265,7 @@
                                         excel in crafting tailor-made
                                         solar solutions engineered to meet the robust energy demands of industrial
                                         operations.</p>
-                                    <p class="small fw-medium text-primary">Hover to Read More<i
+                                    <p class="small fw-medium text-primary hover-text">Hover to Read More<i
                                             class="fa fa-arrow-right ms-2"></i></p>
                                 </div>
                             </div>
@@ -403,7 +395,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
+                            <!-- <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed color-faq-question" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
@@ -440,7 +432,7 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed color-faq-question" type="button"
@@ -755,14 +747,13 @@
                                                 <div class="invalid-feedback">Please enter your mobile number.</div>
                                             </div>
                                             <div class="col-12 col-sm-6 mt-3">
-                                                <select class="form-select border-3" style="height: 55px;" required
-                                                    name="billInfo">
-                                                    <option value="">Average Monthly Bill</option>
-                                                    <option value="Below 1500rs">Below 1500rs</option>
-                                                    <option value="1500rs-2500rs">1500rs-2500rs</option>
-                                                    <option value="2500rs-5000rs">2500rs-5000rs</option>
-                                                    <option value="Above 5000rs">Above 5000rs</option>
-                                                </select>
+                                                <label for="Average Monthly Bill" class="styled-label">Average Monthly Bill</label>
+                                                <div class="btn-group btn-group-custom" role="group" aria-label="Average Monthly Bill">
+                                                    <button type="button" class="btn btn-outline-primary" data-value="Below 1500rs">Below 1500rs</button>
+                                                    <button type="button" class="btn btn-outline-primary" data-value="1500rs-2500rs">1500rs-2500rs</button>
+                                                    <button type="button" class="btn btn-outline-primary" data-value="2500rs-5000rs">2500rs-5000rs</button>
+                                                    <button type="button" class="btn btn-outline-primary" data-value="Above 5000rs">Above 5000rs</button>
+                                                </div>
                                                 <div class="invalid-feedback">Please select a service.</div>
                                             </div>
                                             <div class="col-12 mt-3">
@@ -1023,9 +1014,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
             </script>
+        <!-- Bootstrap 5: Include Bootstrap's CSS and JS -->
+        <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> -->
+
+        
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
     </body>
 
 </html>

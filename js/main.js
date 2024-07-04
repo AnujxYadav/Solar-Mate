@@ -172,54 +172,59 @@ const org = {
 }
 
 $(document).ready(function() {
+    console.log(window.innerWidth);
+    if(window.innerWidth <= 1180) {
+        //select all elements of class hover-text and hide 
+        $('.hover-text').hide();
+    }
+    else {
     var timeoutId;
     var originalWidth = $('.col-md-6.col-lg-4.wow.fadeInUp.view1').css('width');
 
-  $('.col-md-6.col-lg-4.wow.fadeInUp.view1').hover(
-    function() {
-      clearTimeout(timeoutId);
-      var that = $(this);
-      timeoutId = setTimeout(function() {
-        that.siblings().hide(0);
-        var child = that.children('.service-item').first();
-        child.css({
-          'display': 'flex',
-          'flex-direction': 'row'
-        });
+    $('.col-md-6.col-lg-4.wow.fadeInUp.view1').hover(
+      function() {
+        clearTimeout(timeoutId);
+        var that = $(this);
+        timeoutId = setTimeout(function() {
+          that.siblings().hide(0);
+          var child = that.children('.service-item').first();
+          child.css({
+            'display': 'flex',
+            'flex-direction': 'row'
+          });
           var icon = child.children('.position-relative').first().children('.service-icon').first();
           // hide the icon
-            icon.hide();
+          icon.hide();
           var nonHoverChild = child.children('.position-relative').first().children('.non-hover').first();
           // change the content of the non-hover div to "Hello"
-            nonHoverChild.html(dict[nonHoverChild.attr('id')]);
-        that.animate({ width: '100%' }, 150);
-      }, 500); // 500 milliseconds = 0.5 second
-    },
+          nonHoverChild.html(dict[nonHoverChild.attr('id')]);
+          that.animate({ width: '100%' }, 150);
+        }, 500); // 500 milliseconds = 0.5 second
+      },
       function () {
         console.log("done");
-      var that = $(this);
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(function() {
-        var child = that.children('.service-item').first();
-        child.css({
-          'display': 'block',
-          'flex-direction': 'column'
-        });
+        var that = $(this);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function() {
+          var child = that.children('.service-item').first();
+          child.css({
+            'display': 'block',
+            'flex-direction': 'column'
+          });
           var icon = child.children('.position-relative').first().children('.service-icon').first();
-          // hide the icon
-          if(window.width < 992)
-            icon.show();
+          // show the icon for large screens
+          icon.show();
           var nonHoverChild = child.children('.position-relative').first().children('.non-hover').first();
-          // change the content of the non-hover div to "Hello"
-            nonHoverChild.html(org[nonHoverChild.attr('id')]);
-        that.animate({ width: originalWidth }, 200, function() {
-          that.siblings().show(250);
-        });
-      }, 500); // 500 milliseconds = 0.5 second
-    }
-  );
+          // revert the content of the non-hover div
+          nonHoverChild.html(org[nonHoverChild.attr('id')]);
+          that.animate({ width: originalWidth }, 200, function() {
+            that.siblings().show(250);
+          });
+        }, 500); // 500 milliseconds = 0.5 second
+      }
+    );
+  }
 });
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -325,3 +330,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, { passive: true });
 });
+
+document.querySelectorAll('.btn-group .btn').forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.btn-group .btn').forEach(btn => btn.classList.remove('active'));
+        // Add active class to the clicked button
+        this.classList.add('active');
+        // Optionally, store the selected value
+        // For example, in a hidden form field or a JavaScript variable
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var navbarToggler = document.querySelector('.custom-toggler');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+  
+    if (navbarToggler && navbarCollapse) {
+      navbarToggler.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (navbarCollapse.style.display === 'block') {
+          navbarCollapse.style.display = 'none';
+        } else {
+          navbarCollapse.style.display = 'block';
+        }
+      });
+  
+      // Close the navbar when a nav item is clicked
+      var navItems = document.querySelectorAll('.navbar-nav .nav-link');
+      navItems.forEach(function(navItem) {
+        navItem.addEventListener('click', function() {
+          if (window.innerWidth < 992) { // Only on mobile
+            navbarCollapse.style.display = 'none';
+          }
+        });
+      });
+  
+      // Handle resize events
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 992) {
+          navbarCollapse.style.display = '';
+        }
+      });
+    }
+  });

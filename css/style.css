@@ -61,6 +61,16 @@ body {
     
 } */
 
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+      display: none;
+    }
+    
+    .navbar-collapse.show {
+      display: block;
+    }
+  }
+
 .about-me {
         /* font-family: "Montserrat", sans-serif; */
             /* font-family: "Playwrite DE Grund", cursive; */
@@ -615,6 +625,28 @@ body {
 
 .service-item.expanded .hovered {
     display: block;
+}
+
+.btn-group-custom .btn {
+    margin-right: 5px; /* Adds space to the right of each button */
+    margin-bottom: 5px; /* Adds space below each button for when they wrap */
+    border-radius: 10px !important; /* Ensures border-radius applies to all buttons */
+}
+
+.styled-label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #495057; /* Dark gray */
+    font-size: 1rem; /* 16px */
+    font-weight: bold;
+    padding: 8px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.btn-group-custom {
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line */
 }
 
 @media (max-width: 1180px) {
