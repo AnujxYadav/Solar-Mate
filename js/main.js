@@ -277,9 +277,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     const yearlySavings = monthlySavings * 12;
                     const tenYearSavings = yearlySavings * 10;
 
-                    document.getElementById('savingsAmount').textContent = '$' + tenYearSavings.toFixed(2);
-                    document.getElementById('billWithout').textContent = monthlyBill.toFixed(2);
-                    document.getElementById('billWith').textContent = (monthlyBill - monthlySavings).toFixed(2);
+                    document.getElementById('savingsAmount').textContent = '$' + tenYearSavings.toFixed(1);
+                    document.getElementById('billWithout').textContent = monthlyBill.toFixed(1);
+                    document.getElementById('billWith').textContent = (monthlyBill - monthlySavings).toFixed(1);
                 }
 
                 // Initial calculation
