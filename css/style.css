@@ -237,6 +237,10 @@ body {
     color: #e4405f;
 }
 
+.fa-whatsapp:hover {
+    color: #0dd632;
+}
+
 .fa-twitter:hover {
     color: #00acee;
 }
