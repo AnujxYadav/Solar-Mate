@@ -348,16 +348,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 function calculateSavings () {
                     const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
-                    const dailyUsage = parseFloat(document.getElementById('dailyUsage').value);
+                    // const dailyUsage = parseFloat(document.getElementById('dailyUsage').value);
 
                     // This is a simplified calculation incorporating both values
-                    const monthlySavings = monthlyBill * (dailyUsage / 50); // Adjust this formula as needed
+                    const monthlySavings = monthlyBill/120;
                     const yearlySavings = monthlySavings * 12;
                     const tenYearSavings = yearlySavings * 10;
 
-                    document.getElementById('savingsAmount').textContent = '$' + tenYearSavings.toFixed(1);
-                    document.getElementById('billWithout').textContent = monthlyBill.toFixed(1);
-                    document.getElementById('billWith').textContent = (monthlyBill - monthlySavings).toFixed(1);
+                    document.getElementById('savingsAmount').textContent = monthlySavings.toFixed(1);
+                    document.getElementById('billWithout').textContent = monthlyBill.toFixed(1)*12*8.5;
                 }
 
                 // Initial calculation

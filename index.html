@@ -674,34 +674,30 @@
                 <h2 class="savings-header text-center">Solar Savings Calculator</h2>
         
                 <div class="slider-container">
-                    <label for="monthlyBill" class="form-label">Monthly Electricity Bill: $<span
-                            id="monthlyBillValue">100</span></label>
+                    <label for="monthlyBill" class="form-label" style="font-weight: 500;">Units consumed per month - <span
+                            id="monthlyBillValue" class="text-primary" style="font-size: 1.5em; font-weight: 800;">100</span> units</label>
                     <input type="range" class="slider" id="monthlyBill" min="0" max="500" value="100"
                         oninput="updateSliderValue(this, 'monthlyBillValue')">
                 </div>
         
-                <div class="slider-container">
+                <!-- <div class="slider-container">
                     <label for="dailyUsage" class="form-label">Daily Daytime Usage: <span id="dailyUsageValue">7</span>
                         kWh</label>
                     <input type="range" class="slider" id="dailyUsage" min="0" max="50" value="7"
                         oninput="updateSliderValue(this, 'dailyUsageValue')">
-                </div>
+                </div> -->
         
                 <button class="btn btn-primary w-100" onclick="calculateSavings()">Calculate Savings</button>
         
-                <div id="results" class="mt-4">
-                    <h3 class="text-center">Potential Savings</h3>
+                <div id="results" class="mt-4" style="border: #8f8f8f 2px solid; padding: 20px;">
+                    <h3 class="text-center">Potential Requirements</h3>
                     <p class="text-center">You could save <span id="savingsAmount">$0</span> in 10 years.</p>
                 </div>
         
                 <div class="bill-comparison">
-                    <div class="bill">
-                        <h4>Bill Without Solar</h4>
-                        <p>$<span id="billWithout">100.00</span></p>
-                    </div>
-                    <div class="bill">
-                        <h4>Bill With Solar</h4>
-                        <p>$<span id="billWith">0.00</span></p>
+                    <div class="bill" style="width: 100%;">
+                        <h3>Savings per Annum</h3>
+                        <p class="text-primary text-center">₹<span id="billWithout" >100.00</span></p>
                     </div>
                 </div>
             </div>
