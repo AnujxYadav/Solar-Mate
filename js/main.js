@@ -98,27 +98,105 @@
     
 })(jQuery);
 
+var billInfo1 = "";
+var billButtons = document.querySelectorAll('.btn-group-custom .btn');
+billButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        billInfo1 = this.getAttribute('data-value'); // Capture the data-value of the clicked button
+        // console.log('Selected Bill Info:', billInfo); // For debugging purposes
+    });
+});
 
-function submitHandler () {
+function submitHandler1 () {
     event.preventDefault();
     console.log("Hello");
-    var form = document.querySelector('.form-style');
+    var form = document.querySelector('.form1');
     if (form.checkValidity() === false) {
         event.preventDefault();
         event.stopPropagation();
         form.classList.add('was-validated');
+        console.log("returned");
         return;
     }
-    var firstName = document.querySelector('input[name="firstName"]').value;
-    var emailID = document.querySelector('input[name="emailID"]').value;
-    var mobileNumber = document.querySelector('input[name="mobileNumber"]').value;
+    var firstName = document.querySelector('input[name="firstName1"]').value;
+    var emailID = document.querySelector('input[name="emailID1"]').value;
+    var mobileNumber = document.querySelector('input[name="mobileNumber1"]').value;
     if(mobileNumber.length !== 10) {
         alert("Please enter a valid mobile number");
         return;
     }
-    var billInfo = document.querySelector('select[name="billInfo"]').value;
-    var specialNote = document.querySelector('textarea[name="specialNote"]').value;
-    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.26756016=' + encodeURIComponent(billInfo) + '&entry.1755035927=' + encodeURIComponent(specialNote);
+
+// Add event listeners to the buttons
+    var billButtons = document.querySelectorAll('.btn-group-custom .btn');
+    billButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            billInfo = this.getAttribute('data-value'); // Capture the data-value of the clicked button
+            console.log('Selected Bill Info:', billInfo); // For debugging purposes
+        });
+    });
+    var specialNote = document.querySelector('textarea[name="specialNote1"]').value;
+    if(specialNote === "") {
+        specialNote = "None";
+    }
+    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.1857257902=Residential' + '&entry.26756016=' + encodeURIComponent(billInfo1) + '&entry.1755035927=' + encodeURIComponent(specialNote);
+    
+    // window.location.href = preFilledLink;
+    window.open(preFilledLink, '_blank').focus(); 
+}
+
+function submitHandler2 () {
+    event.preventDefault();
+    console.log("Hello");
+    var form = document.querySelector('.form2');
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        console.log("returned");
+        return;
+    }
+    var firstName = document.querySelector('input[name="firstName2"]').value;
+    var emailID = document.querySelector('input[name="emailID2"]').value;
+    var mobileNumber = document.querySelector('input[name="mobileNumber2"]').value;
+    if(mobileNumber.length !== 10) {
+        alert("Please enter a valid mobile number");
+        return;
+    }
+    var billInfo = document.querySelector('input[name="monthlyBillValuetext2"]').value;
+    var specialNote = document.querySelector('textarea[name="specialNote2"]').value;
+    if(specialNote === "") {
+        specialNote = "None";
+    }
+    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.1857257902=Commercial' + '&entry.26756016=' + encodeURIComponent(billInfo) + '&entry.1755035927=' + encodeURIComponent(specialNote);
+    
+    // window.location.href = preFilledLink;
+    window.open(preFilledLink, '_blank').focus(); 
+}
+
+function submitHandler3 () {
+    event.preventDefault();
+    console.log("Hello");
+    var form = document.querySelector('.form3');
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        console.log("returned");
+        return;
+    }
+    var firstName = document.querySelector('input[name="firstName3"]').value;
+    var emailID = document.querySelector('input[name="emailID3"]').value;
+    var mobileNumber = document.querySelector('input[name="mobileNumber3"]').value;
+    if(mobileNumber.length !== 10) {
+        alert("Please enter a valid mobile number");
+        return;
+    }
+    var billInfo = document.querySelector('input[name="monthlyBillValuetext3"]').value;
+    var specialNote = document.querySelector('textarea[name="specialNote3"]').value;
+    if(specialNote === "") {
+        specialNote = "None";
+    }
+    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.1857257902=Industrial' + '&entry.26756016=' + encodeURIComponent(billInfo) + '&entry.1755035927=' + encodeURIComponent(specialNote);
     
     // window.location.href = preFilledLink;
     window.open(preFilledLink, '_blank').focus(); 
