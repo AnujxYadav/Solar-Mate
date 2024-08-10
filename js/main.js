@@ -85,21 +85,21 @@
 
 
     // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
+    // var portfolioIsotope = $('.portfolio-container').isotope({
+    //     itemSelector: '.portfolio-item',
+    //     layoutMode: 'fitRows'
+    // });
+    // $('#portfolio-flters li').on('click', function () {
+    //     $("#portfolio-flters li").removeClass('active');
+    //     $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+    //     portfolioIsotope.isotope({filter: $(this).data('filter')});
+    // });
     
 })(jQuery);
 
 var billInfo1 = "";
-var billButtons = document.querySelectorAll('.btn-group-custom .btn');
+var billButtons = document.querySelectorAll('.btn-group-custom .btn .buttom-values');
 billButtons.forEach(function(button) {
     button.addEventListener('click', function() {
         billInfo1 = this.getAttribute('data-value'); // Capture the data-value of the clicked button
@@ -127,13 +127,7 @@ function submitHandler1 () {
     }
 
 // Add event listeners to the buttons
-    var billButtons = document.querySelectorAll('.btn-group-custom .btn');
-    billButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            billInfo = this.getAttribute('data-value'); // Capture the data-value of the clicked button
-            console.log('Selected Bill Info:', billInfo); // For debugging purposes
-        });
-    });
+    
     var specialNote = document.querySelector('textarea[name="specialNote1"]').value;
     if(specialNote === "") {
         specialNote = "None";
@@ -323,8 +317,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                     serviceItems.forEach(item => {
-                        item.addEventListener('click', handleInteraction);
-                        item.addEventListener('touchstart', handleInteraction, { passive: true });
+                        // item.addEventListener('click', handleInteraction);
+                        // item.addEventListener('touchstart', handleInteraction, { passive: true });
                     });
 
                     // Close expanded items when clicking outside

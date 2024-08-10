@@ -659,6 +659,10 @@ body {
     flex-wrap: wrap; /* Allows buttons to wrap to the next line */
 }
 
+.service-icon2 {
+    display: none;
+}
+
 @media (max-width: 1180px) {
     .service-item img {
         display: none;
@@ -667,6 +671,23 @@ body {
     .service-icon {
         display: none;
     }
+
+    .service-icon2 {
+        display: block;
+        color: var(--primary);
+        margin: 20px 0 20px 0;
+        background: #FFFFFF;
+        border-radius: 100px;
+    }
+
+    .service-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
 }
 
 /*** Feature ***/
