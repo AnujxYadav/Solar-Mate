@@ -690,6 +690,11 @@ body {
     
 }
 
+.img-rounded{
+    border-radius: 20px;
+    box-shadow: 30px;
+}
+
 /*** Feature ***/
 @media (min-width: 992px) {
     .container.feature {
