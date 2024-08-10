@@ -690,6 +690,12 @@ body {
     
 }
 
+.green-button {
+    background-color: green !important;
+    color: white !important;
+    border-color: green !important;
+}
+
 .img-rounded{
     border-radius: 20px;
     box-shadow: 30px;

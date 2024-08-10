@@ -99,11 +99,22 @@
 })(jQuery);
 
 var billInfo1 = "";
-var billButtons = document.querySelectorAll('.btn-group-custom .btn .buttom-values');
+var billButtons = document.querySelectorAll('.btn-group-custom .btn');
+
 billButtons.forEach(function(button) {
     button.addEventListener('click', function() {
         billInfo1 = this.getAttribute('data-value'); // Capture the data-value of the clicked button
-        // console.log('Selected Bill Info:', billInfo); // For debugging purposes
+        console.log('Selected Bill Info:', billInfo1); // For debugging purposes
+        
+        // Remove the green class from all buttons except the clicked one
+        billButtons.forEach(btn => {
+            if (btn !== this) {
+                btn.classList.remove('green-button');
+            }
+        });
+        
+        // Add the green class to the clicked button
+        this.classList.add('green-button');
     });
 });
 
@@ -132,7 +143,7 @@ function submitHandler1 () {
     if(specialNote === "") {
         specialNote = "None";
     }
-    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.1857257902=Residential' + '&entry.26756016=' + encodeURIComponent(billInfo1) + '&entry.1755035927=' + encodeURIComponent(specialNote);
+    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSck5TIZlZtXdX_aYUGPdoX_OTCPnY2-y4-ST744_f2tgVkUWw/viewform?usp=pp_url&entry.368488719=' + encodeURIComponent(firstName) + '&entry.1117197037=' + encodeURIComponent(emailID) + '&entry.1327484179=' + encodeURIComponent(mobileNumber) + '&entry.1581777149=Residential' + '&entry.1659302869=' + encodeURIComponent(billInfo1) + '&entry.1103337190=' + encodeURIComponent(specialNote);
     
     // window.location.href = preFilledLink;
     window.open(preFilledLink, '_blank').focus(); 
@@ -161,7 +172,7 @@ function submitHandler2 () {
     if(specialNote === "") {
         specialNote = "None";
     }
-    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.1857257902=Commercial' + '&entry.26756016=' + encodeURIComponent(billInfo) + '&entry.1755035927=' + encodeURIComponent(specialNote);
+    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSck5TIZlZtXdX_aYUGPdoX_OTCPnY2-y4-ST744_f2tgVkUWw/viewform?usp=pp_url&entry.368488719=' + encodeURIComponent(firstName) + '&entry.1117197037=' + encodeURIComponent(emailID) + '&entry.1327484179=' + encodeURIComponent(mobileNumber) + '&entry.1581777149=Commercial' + '&entry.1659302869=' + encodeURIComponent(billInfo) + '&entry.1103337190=' + encodeURIComponent(specialNote);
     
     // window.location.href = preFilledLink;
     window.open(preFilledLink, '_blank').focus(); 
@@ -190,7 +201,7 @@ function submitHandler3 () {
     if(specialNote === "") {
         specialNote = "None";
     }
-    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfLu4e4e0QGVS1-XwN9MVyJyP_vzfZNZtip7GPPq7VwCMmXCw/viewform?usp=pp_url&entry.1510382416=' + encodeURIComponent(firstName) + '&entry.1290999781=' + encodeURIComponent(emailID) + '&entry.786904787=' + encodeURIComponent(mobileNumber) + '&entry.1857257902=Industrial' + '&entry.26756016=' + encodeURIComponent(billInfo) + '&entry.1755035927=' + encodeURIComponent(specialNote);
+    var preFilledLink = 'https://docs.google.com/forms/d/e/1FAIpQLSck5TIZlZtXdX_aYUGPdoX_OTCPnY2-y4-ST744_f2tgVkUWw/viewform?usp=pp_url&entry.368488719=' + encodeURIComponent(firstName) + '&entry.1117197037=' + encodeURIComponent(emailID) + '&entry.1327484179=' + encodeURIComponent(mobileNumber) + '&entry.1581777149=Industrial' + '&entry.1659302869=' + encodeURIComponent(billInfo) + '&entry.1103337190=' + encodeURIComponent(specialNote);
     
     // window.location.href = preFilledLink;
     window.open(preFilledLink, '_blank').focus(); 
